@@ -13,7 +13,7 @@ class Tableau1 extends Phaser.Scene{
      * Précharge les assets
      */
     preload(){
-        this.loadFrames('', 'asset/pngutile/guilde/backguilde/',34);
+        this.loadFrames('back', 'asset/pngutile/guilde/backguilde/',34);
         this.loadFrames('front', 'asset/pngutile/guilde/frontguilde/front',15);
         this.loadFrames('eca', 'asset/pngutile/eca',2);
         this.loadFrames('elio', 'asset/pngutile/elio',2);
@@ -53,7 +53,71 @@ class Tableau1 extends Phaser.Scene{
      * Crée la scène
      */
     create(){
-        this.add.image(300, 300,'background')
+        /**
+         * Crée le background
+         */
+        this.add.image(864,486,'background')
+
+        this.add.image(864,486,'tombe')
+        this.add.image(864,486,'bouftouroyal')
+        this.add.image(864,486,'perenoel')
+        this.add.image(864,486,'cadeau')
+        this.add.image(884,516,'dofusemeraude')
+        this.add.image(864,486,'principal')
+        this.add.image(864,486,'tableau')
+        this.add.image(864,486,'vendeur')
+
+        this.add.image(864,486,'iop1')
+        this.add.image(864,486,'iop2')
+
+        this.add.image(864,486,'elio1')
+        this.add.image(864,486,'elio2')
+
+        this.add.image(864,486,'osa1')
+        this.add.image(864,486,'osa2')
+
+        this.add.image(864,486,'ouginak1')
+        this.add.image(864,486,'ouginak2')
+
+        this.add.image(864,486,'panda1')
+        this.add.image(864,486,'panda2')
+
+        this.add.image(864,486,'sadi1')
+        this.add.image(864,486,'sadi2')
+
+        this.add.image(864,486,'eni1')
+        this.add.image(864,486,'eni2')
+
+        this.add.image(864,486,'roub1')
+        this.add.image(864,486,'roub2')
+
+        this.add.image(864,486,'steamer1')
+        this.add.image(864,486,'steamer2')
+
+        this.add.image(864,486,'enutrof1')
+        this.add.image(864,486,'enutrof2')
+
+        this.add.image(864,486,'sram1')
+        this.add.image(864,486,'sram2')
+
+        this.add.image(864,486,'sacrieur1')
+        this.add.image(864,486,'sacrieur2')
+
+        this.add.image(864,486,'zobal1')
+        this.add.image(864,486,'zobal2')
+
+        this.add.image(864,486,'eca1')
+        this.add.image(864,486,'eca2')
+
+        this.add.image(864,486,'xelor1')
+        this.add.image(864,486,'xelor2')
+
+        this.add.image(864,486,'hupper1')
+        this.add.image(864,486,'hupper2')
+
+        this.add.image(864,486,'ankamaauth')
+        this.add.image(864,486,'ankamashield')
+
         //initialise les écoutes de touches pressées et relâchées
         this.initKeyboard();
 
