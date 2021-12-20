@@ -46,13 +46,20 @@ class Tableau1 extends Phaser.Scene{
         this.load.image('background', 'asset/Background.png');
         this.load.image('spark','asset/particule/blue.png')
         this.load.image('spurk','asset/particule/red.png')
+        this.load.image('feu','asset/particule/white.png')
 
         this.load.audio('dofusmusic',['asset/musiquedofus.mp3']);
-
+        this.load.audio('music',['asset/musique.mp3']);
 
     }
 
-
+    getFrames(prefix,length){
+        let frames=[];
+        for (let i=1;i<=length;i++){
+            frames.push({key: prefix+i});
+        }
+        return frames;
+    }
     /**
      * Crée la scène
      */
@@ -75,7 +82,9 @@ class Tableau1 extends Phaser.Scene{
         // pour chaque lettre on va créer un élément graphique
         this.creerClavier();
 
+
         // met en place le Background et Ankama authentificathor
+        this.wow=this.sound.add('music')
         this.background = this.add.image(864, 486, 'background')
         this.ankamaauth = this.add.image(864, 486, 'ankamaauth')
         this.bt=this.sound.add('dofusmusic',{ loop: true });
@@ -84,8 +93,58 @@ class Tableau1 extends Phaser.Scene{
         this.Partifille = 0
         this.Partimec = 0
         this.text=this.add.text(330, 850, "Appuiyez sur A pour enlever l'authentificateur", { color: '#ffffff',fontSize:40 })
+        this.idle = this.add.sprite(500, 500, 'fantome1').setAlpha(0);
+        console.log(frames)
+        this.anims.create({
+            key: 'fant',
+            frames: this.getFrames("fantome",3),
+            frameRate: 12,
+            repeat: 5,
+            showOnStart:false,
+            hideOnComplete:true,
+        });
     }
 
+
+    creerFeu(){
+        var particles = this.add.particles('spark').setScale(0.2);
+
+        var emitter = particles.createEmitter();
+
+        emitter.setPosition(1700, 2350);
+        emitter.setSpeed(200);
+        emitter.setBlendMode(Phaser.BlendModes.ADD);
+    }
+
+    creerFeu1(){
+        var particles = this.add.particles('spark').setScale(0.2);
+
+        var emitter = particles.createEmitter();
+
+        emitter.setPosition(4000, 1220);
+        emitter.setSpeed(200);
+        emitter.setBlendMode(Phaser.BlendModes.ADD);
+    }
+
+    creerFeu2(){
+        var particles = this.add.particles('spark').setScale(0.2);
+
+        var emitter = particles.createEmitter();
+
+        emitter.setPosition(4000, 3500);
+        emitter.setSpeed(200);
+        emitter.setBlendMode(Phaser.BlendModes.ADD);
+    }
+
+    creerFeu3(){
+        var particles = this.add.particles('spark').setScale(0.2);
+
+        var emitter = particles.createEmitter();
+
+        emitter.setPosition(6320, 2350);
+        emitter.setSpeed(200);
+        emitter.setBlendMode(Phaser.BlendModes.ADD);
+    }
 
     creerPartimec(){
         if (this.Partimec == 0) {
@@ -103,6 +162,11 @@ class Tableau1 extends Phaser.Scene{
             this.Partimec = 0
         }
     }
+
+
+
+
+
 
     creerPartifille(){
         if (this.Partifille == 0) {
@@ -310,6 +374,7 @@ class Tableau1 extends Phaser.Scene{
                         me.iop1.setAlpha(1)
                         me.creerPartimec();
                         me.creerTimerm();
+                        me.wow.play()
 
                     }
                     else if (me.ankamashield.alpha === 0) {
@@ -324,6 +389,7 @@ class Tableau1 extends Phaser.Scene{
                         me.elio1.setAlpha(1)
                         me.creerPartimec();
                         me.creerTimerm();
+                        me.wow.play()
                     }
                     else if (me.ankamashield.alpha === 0) {
                         me.elio.setAlpha(0)
@@ -337,6 +403,7 @@ class Tableau1 extends Phaser.Scene{
                         me.osa1.setAlpha(1)
                         me.creerPartifille();
                         me.creerTimerf();
+                        me.wow.play()
                     }
                     else if (me.ankamashield.alpha === 0) {
                         me.osa.setAlpha(0)
@@ -350,6 +417,7 @@ class Tableau1 extends Phaser.Scene{
                         me.ouginak1.setAlpha(1)
                         me.creerPartifille();
                         me.creerTimerf();
+                        me.wow.play()
                     }
                     else if (me.ankamashield.alpha === 0) {
                         me.ouginak.setAlpha(0)
@@ -363,6 +431,7 @@ class Tableau1 extends Phaser.Scene{
                         me.panda1.setAlpha(1)
                         me.creerPartifille();
                         me.creerTimerf();
+                        me.wow.play()
                     }
                     else if (me.ankamashield.alpha === 0) {
                         me.panda.setAlpha(0)
@@ -376,6 +445,7 @@ class Tableau1 extends Phaser.Scene{
                         me.sadi1.setAlpha(1)
                         me.creerPartifille();
                         me.creerTimerf();
+                        me.wow.play()
                     }
                     else if (me.ankamashield.alpha === 0) {
                         me.sadi.setAlpha(0)
@@ -389,6 +459,7 @@ class Tableau1 extends Phaser.Scene{
                         me.eni1.setAlpha(1)
                         me.creerPartifille();
                         me.creerTimerf();
+                        me.wow.play()
                     }
                     else if (me.ankamashield.alpha === 0) {
                         me.eni.setAlpha(0)
@@ -402,6 +473,7 @@ class Tableau1 extends Phaser.Scene{
                         me.roub1.setAlpha(1)
                         me.creerPartifille();
                         me.creerTimerf();
+                        me.wow.play()
                     }
                     else if (me.ankamashield.alpha === 0) {
                         me.roub.setAlpha(0)
@@ -415,6 +487,7 @@ class Tableau1 extends Phaser.Scene{
                         me.steamer1.setAlpha(1)
                         me.creerPartifille();
                         me.creerTimerf();
+                        me.wow.play()
                     }
                     else if (me.ankamashield.alpha === 0) {
                         me.steamer.setAlpha(0)
@@ -428,6 +501,7 @@ class Tableau1 extends Phaser.Scene{
                         me.enutrof1.setAlpha(1)
                         me.creerPartimec();
                         me.creerTimerm();
+                        me.wow.play()
                     }
                     else if (me.ankamashield.alpha === 0) {
                         me.enutrof.setAlpha(0)
@@ -441,6 +515,7 @@ class Tableau1 extends Phaser.Scene{
                         me.sram1.setAlpha(1)
                         me.creerPartifille();
                         me.creerTimerf();
+                        me.wow.play()
                     }
                     else if (me.ankamashield.alpha === 0) {
                         me.sram.setAlpha(0)
@@ -454,6 +529,7 @@ class Tableau1 extends Phaser.Scene{
                         me.sacrieur.setAlpha(1)
                         me.creerPartimec();
                         me.creerTimerm();
+                        me.wow.play()
                     }
                     else if (me.ankamashield.alpha === 0) {
                         me.sacrieur1.setAlpha(0)
@@ -467,6 +543,7 @@ class Tableau1 extends Phaser.Scene{
                         me.zobal1.setAlpha(1)
                         me.creerPartimec();
                         me.creerTimerm();
+                        me.wow.play()
                     }
                     else if (me.ankamashield.alpha === 0) {
                         me.zobal.setAlpha(0)
@@ -480,6 +557,7 @@ class Tableau1 extends Phaser.Scene{
                         me.eca1.setAlpha(1)
                         me.creerPartimec();
                         me.creerTimerm();
+                        me.wow.play()
                     }
                     else if (me.ankamashield.alpha === 0) {
                         me.eca.setAlpha(0)
@@ -493,6 +571,7 @@ class Tableau1 extends Phaser.Scene{
                         me.xelor1.setAlpha(1)
                         me.creerPartifille();
                         me.creerTimerf();
+                        me.wow.play()
                     }
                     else if (me.ankamashield.alpha === 0) {
                         me.xelor.setAlpha(0)
@@ -506,6 +585,7 @@ class Tableau1 extends Phaser.Scene{
                         me.hupper1.setAlpha(1)
                         me.creerPartimec();
                         me.creerTimerm();
+                        me.wow.play()
                     }
                     else if (me.ankamashield.alpha === 0) {
                         me.hupper.setAlpha(0)
@@ -523,22 +603,15 @@ class Tableau1 extends Phaser.Scene{
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.B:
-                    if (me.ankamaauth.alpha === 0) {
-                        me.ankamaauth.setAlpha(0)
-                    }
-                    else {
-                        me.principal.setAlpha(0)
-                    }
+                    me.creerFeu();
+                    me.creerFeu1();
+                    me.creerFeu2();
+                    me.creerFeu3();
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.N:
-                    if (me.ankamaauth.alpha === 0) {
-                        me.ankamaauth.setAlpha(0)
-
-                    }
-                    else {
-                        me.principal.setAlpha(0)
-                    }
+                    me.idle.setAlpha(1)
+                    me.idle.play('fant');
                     break;
 
             }
