@@ -56,75 +56,7 @@ class Tableau1 extends Phaser.Scene{
      */
     create(){
 
-        this.bt=this.sound.add('dofusmusic',{ loop: true });
-        this.bt.play()
-        this.bt.volume=0.2
 
-
-       /**
-         * Crée le background
-         */
-        this.add.image(864,486,'background')
-
-        this.add.image(864,486,'tombe')
-        this.add.image(864,486,'bouftouroyal')
-        this.add.image(864,486,'perenoel')
-        this.add.image(864,486,'cadeau')
-        this.add.image(884,516,'dofusemeraude')
-        this.add.image(864,486,'principal')
-        this.add.image(864,486,'tableau')
-        this.add.image(864,486,'vendeur')
-
-        this.add.image(864,486,'iop1')
-        this.add.image(864,486,'iop2')
-
-        this.add.image(864,486,'elio1')
-        this.add.image(864,486,'elio2')
-
-        this.add.image(864,486,'osa1')
-        this.add.image(864,486,'osa2')
-
-        this.add.image(864,486,'ouginak1')
-        this.add.image(864,486,'ouginak2')
-
-        this.add.image(864,486,'panda1')
-        this.add.image(864,486,'panda2')
-
-        this.add.image(864,486,'sadi1')
-        this.add.image(864,486,'sadi2')
-
-        this.add.image(864,486,'eni1')
-        this.add.image(864,486,'eni2')
-
-        this.add.image(864,486,'roub1')
-        this.add.image(864,486,'roub2')
-
-        this.add.image(864,486,'steamer1')
-        this.add.image(864,486,'steamer2')
-
-        this.add.image(864,486,'enutrof1')
-        this.add.image(864,486,'enutrof2')
-
-        this.add.image(864,486,'sram1')
-        this.add.image(864,486,'sram2')
-
-        this.add.image(864,486,'sacrieur1')
-        this.add.image(864,486,'sacrieur2')
-
-        this.add.image(864,486,'zobal1')
-        this.add.image(864,486,'zobal2')
-
-        this.add.image(864,486,'eca1')
-        this.add.image(864,486,'eca2')
-
-        this.add.image(864,486,'xelor1')
-        this.add.image(864,486,'xelor2')
-
-        this.add.image(864,486,'hupper1')
-        this.add.image(864,486,'hupper2')
-
-        this.add.image(864,486,'ankamaauth')
-        this.add.image(864,486,'ankamashield')
 
         //initialise les écoutes de touches pressées et relâchées
         this.initKeyboard();
@@ -141,8 +73,90 @@ class Tableau1 extends Phaser.Scene{
         // pour chaque lettre on va créer un élément graphique
         this.creerClavier();
 
+        // met en place le Background et Ankama authentificathor
+        this.background = this.add.image(864, 486, 'background')
+        this.ankamaauth = this.add.image(864, 486, 'ankamaauth')
+
 
     }
+
+    /**
+     * Crée le décor
+     */
+    creerPaysage(){
+        this.bt=this.sound.add('dofusmusic',{ loop: true });
+        this.bt.play()
+        this.bt.volume=0.2
+
+
+
+            /**
+             * Crée le background
+             */
+
+
+            this.tombe = this.add.image(864, 486, 'tombe')
+            this.bouftouroyal = this.add.image(864, 486, 'bouftouroyal').setAlpha(0)
+            this.perenoel = this.add.image(864, 486, 'perenoel').setAlpha(0)
+            this.cadeau = this.add.image(864, 486, 'cadeau').setAlpha(0)
+            this.dofusemeraude = this.add.image(884, 516, 'dofusemeraude').setAlpha(0)
+            this.principal = this.add.image(864, 486, 'principal').setAlpha(0)
+            this.tableau = this.add.image(864, 486, 'tableau')
+            this.vendeur = this.add.image(864, 486, 'vendeur').setAlpha(0)
+
+            this.iop = this.add.image(864, 486, 'iop1').setAlpha(0)
+            this.iop1 = this.add.image(864, 486, 'iop2').setAlpha(0)
+
+            this.elio = this.add.image(864, 486, 'elio1').setAlpha(0)
+            this.elio1 = this.add.image(864, 486, 'elio2').setAlpha(0)
+
+            this.osa = this.add.image(864, 486, 'osa1').setAlpha(0)
+            this.osa1 = this.add.image(864, 486, 'osa2').setAlpha(0)
+
+            this.ougi = this.add.image(864, 486, 'ouginak1').setAlpha(0)
+            this.ougi1 = this.add.image(864, 486, 'ouginak2').setAlpha(0)
+
+            this.panda = this.add.image(864, 486, 'panda1').setAlpha(0)
+            this.panda1 = this.add.image(864, 486, 'panda2').setAlpha(0)
+
+            this.sadi = this.add.image(864, 486, 'sadi1').setAlpha(0)
+            this.sadi1 = this.add.image(864, 486, 'sadi2').setAlpha(0)
+
+            this.eni = this.add.image(864, 486, 'eni1').setAlpha(0)
+            this.eni1 = this.add.image(864, 486, 'eni2').setAlpha(0)
+
+            this.roub = this.add.image(864, 486, 'roub1').setAlpha(0)
+            this.roub1 = this.add.image(864, 486, 'roub2').setAlpha(0)
+
+            this.steamer = this.add.image(864, 486, 'steamer1').setAlpha(0)
+            this.steamer1 = this.add.image(864, 486, 'steamer2').setAlpha(0)
+
+            this.enu = this.add.image(864, 486, 'enutrof1').setAlpha(0)
+            this.enu1 = this.add.image(864, 486, 'enutrof2').setAlpha(0)
+
+            this.sram = this.add.image(864, 486, 'sram1').setAlpha(0)
+            this.sram1 = this.add.image(864, 486, 'sram2').setAlpha(0)
+
+            this.sacri = this.add.image(864, 486, 'sacrieur1').setAlpha(0)
+            this.sacri1 = this.add.image(864, 486, 'sacrieur2').setAlpha(0)
+
+            this.zobal = this.add.image(864, 486, 'zobal1').setAlpha(0)
+            this.zobal1 = this.add.image(864, 486, 'zobal2').setAlpha(0)
+
+            this.eca = this.add.image(864, 486, 'eca1').setAlpha(0)
+            this.eca1 = this.add.image(864, 486, 'eca2').setAlpha(0)
+
+            this.xelor = this.add.image(864, 486, 'xelor1').setAlpha(0)
+            this.xelor1 = this.add.image(864, 486, 'xelor2').setAlpha(0)
+
+            this.hupper = this.add.image(864, 486, 'hupper1').setAlpha(0)
+            this.hupper1 = this.add.image(864, 486, 'hupper2').setAlpha(0)
+
+
+            this.ankamashield = this.add.image(864, 486, 'ankamashield').setAlpha(0)
+
+    }
+
 
     creerClavier(){
         //espacement entre les lettres = largeur de la scène / nombre de lettres
@@ -162,31 +176,208 @@ class Tableau1 extends Phaser.Scene{
         }
     }
 
-    initKeyboard(){
-        /**
-         *
-         * @type {Tableau1}
-         */
-        let me=this;
-        this.input.keyboard.on('keydown', function(kevent)
-        {
-            console.log("keydown",kevent.key,kevent)
+    initKeyboard() {
+
+
+        let me = this;
+        this.input.keyboard.on('keydown', function (kevent) {
+            switch (kevent.keyCode) {
+
+                case Phaser.Input.Keyboard.KeyCodes.A:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+                        me.creerPaysage();
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.Z:
+                    if (me.principal.alpha === 0) {
+                        me.principal.setAlpha(1)
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.E:
+                    if (me.dofusemeraude.alpha === 0) {
+                        me.dofusemeraude.setAlpha(1)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.R:
+                    if (me.perenoel.alpha === 0) {
+                        me.perenoel.setAlpha(1)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.T:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.Y:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.U:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.I:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.O:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.P:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.Q:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.S:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.D:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.F:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.G:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.H:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.J:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.K:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.L:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.M:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.W:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.X:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.C:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.V:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.B:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+                case Phaser.Input.Keyboard.KeyCodes.N:
+                    if (me.ankamaauth.alpha === 1) {
+                        me.ankamaauth.setAlpha(0)
+
+                    }
+                    break;
+
+            }
             for(let lettre of me.lettres){
                 if(kevent.key === lettre){
                     /**
                      *
-                     * @type {T}
+                     * @type {Phaser.GameObjects.Text}
                      */
                     let objetGraphique=me.children.getByName(lettre);
                     objetGraphique.toucheEnfoncee=true;
 
                 }
             }
-
         });
-        this.input.keyboard.on('keyup', function(kevent)
-        {
-            console.log("keyup",kevent.key,kevent)
+        this.input.keyboard.on('keyup', function (kevent) {
             for(let lettre of me.lettres){
                 if(kevent.key === lettre){
                     /**
@@ -200,24 +391,44 @@ class Tableau1 extends Phaser.Scene{
                     me.quandToucheRelachee(kevent.key,touche)
                 }
             }
+            switch (kevent.keyCode) {
 
+            }
         });
-    }
-
-    createClasse(){
-
-    }
-
-    quandToucheRelachee(lettre,objetGraphique){
-
 
     }
 
 
-    update(){
+
+
+
+    update() {
+        //pour chacune des lettres on va tester si il faut faire des choses ou non
+        for (let lettre of this.lettres) {
+
+            //--- interaction sur le clavier ---
+
+            /**
+             * La touche qui correspond à la lettre
+             * @type {Phaser.GameObjects.Text}
+             */
+            let touche = this.children.getByName(lettre);
+            //si enfoncée le fond de touche est gris
+            if (touche.toucheEnfoncee) {
+                touche.setBackgroundColor("#888888")
+            } else {
+                touche.setBackgroundColor("#000000")
+            }
+            //si actif le texte est vert sinon blanc
+            if (touche.actif) {
+                touche.setColor("#00FF00")
+            } else {
+                touche.setColor("#FFFFFF")
+            }
+        }
+
 
     }
-
 
 
 }
