@@ -45,6 +45,8 @@ class Tableau1 extends Phaser.Scene{
         this.load.image('vendeur', 'asset/pngutile/vendeur.png');
         this.load.image('background', 'asset/Background.png');
 
+        this.load.audio('dofusmusic',['asset']);
+
 
     }
 
