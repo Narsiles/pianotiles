@@ -44,6 +44,7 @@ class Tableau1 extends Phaser.Scene{
         this.load.image('tombe', 'asset/pngutile/tombe.png');
         this.load.image('vendeur', 'asset/pngutile/vendeur.png');
         this.load.image('background', 'asset/Background.png');
+        this.load.image('spark','asset/particule/blue.png')
 
         this.load.audio('dofusmusic',['asset/musiquedofus.mp3']);
 
@@ -182,19 +183,19 @@ class Tableau1 extends Phaser.Scene{
         let me = this;
         this.input.keyboard.on('keydown', function (kevent) {
             switch (kevent.keyCode) {
-
+                //Ankama authentificator
                 case Phaser.Input.Keyboard.KeyCodes.A:
                     if (me.ankamaauth.alpha === 1) {
                         me.ankamaauth.setAlpha(0)
                         me.creerPaysage();
                     }
                     break;
-
+                //création des éléments qui apparaissent et disparaissent quand on ré appuie sur la touche
                 case Phaser.Input.Keyboard.KeyCodes.Z:
                     if (me.principal.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.principal.setAlpha(1)
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.principal.setAlpha(0)
                     }
 
@@ -203,9 +204,8 @@ class Tableau1 extends Phaser.Scene{
                 case Phaser.Input.Keyboard.KeyCodes.E:
                     if (me.dofusemeraude.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.dofusemeraude.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.dofusemeraude.setAlpha(0)
                     }
                     break;
@@ -213,9 +213,8 @@ class Tableau1 extends Phaser.Scene{
                 case Phaser.Input.Keyboard.KeyCodes.R:
                     if (me.perenoel.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.perenoel.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.perenoel.setAlpha(0)
                     }
                     break;
@@ -223,9 +222,8 @@ class Tableau1 extends Phaser.Scene{
                 case Phaser.Input.Keyboard.KeyCodes.T:
                     if (me.cadeau.alpha === 0 && me.perenoel.alpha === 1 && me.ankamashield.alpha === 0) {
                         me.cadeau.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.cadeau.setAlpha(0)
                     }
                     break;
@@ -233,9 +231,8 @@ class Tableau1 extends Phaser.Scene{
                 case Phaser.Input.Keyboard.KeyCodes.Y:
                     if (me.bouftouroyal.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.bouftouroyal.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0){
                         me.bouftouroyal.setAlpha(0)
                     }
                     break;
@@ -243,9 +240,8 @@ class Tableau1 extends Phaser.Scene{
                 case Phaser.Input.Keyboard.KeyCodes.U:
                     if (me.vendeur.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.vendeur.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.vendeur.setAlpha(0)
                     }
                     break;
@@ -254,9 +250,8 @@ class Tableau1 extends Phaser.Scene{
                     if (me.iop.alpha === 0 && me.iop1.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.iop.setAlpha(1)
                         me.iop1.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.iop.setAlpha(0)
                         me.iop1.setAlpha(0)
                     }
@@ -266,9 +261,8 @@ class Tableau1 extends Phaser.Scene{
                     if (me.elio.alpha === 0 && me.elio1.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.elio.setAlpha(1)
                         me.elio1.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.elio.setAlpha(0)
                         me.elio1.setAlpha(0)
                     }
@@ -278,9 +272,8 @@ class Tableau1 extends Phaser.Scene{
                     if (me.osa.alpha === 0 && me.osa1.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.osa.setAlpha(1)
                         me.osa1.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.osa.setAlpha(0)
                         me.osa1.setAlpha(0)
                     }
@@ -290,9 +283,8 @@ class Tableau1 extends Phaser.Scene{
                     if (me.ouginak1.alpha === 0 && me.ouginak.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.ouginak.setAlpha(1)
                         me.ouginak1.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.ouginak.setAlpha(0)
                         me.ouginak1.setAlpha(0)
                     }
@@ -302,9 +294,8 @@ class Tableau1 extends Phaser.Scene{
                     if (me.panda.alpha === 0 && me.panda1.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.panda.setAlpha(1)
                         me.panda1.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.panda.setAlpha(0)
                         me.panda1.setAlpha(0)
                     }
@@ -314,9 +305,8 @@ class Tableau1 extends Phaser.Scene{
                     if (me.sadi.alpha === 0 && me.sadi1.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.sadi.setAlpha(1)
                         me.sadi1.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.sadi.setAlpha(0)
                         me.sadi1.setAlpha(0)
                     }
@@ -326,9 +316,8 @@ class Tableau1 extends Phaser.Scene{
                     if (me.eni.alpha === 0 && me.eni1.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.eni.setAlpha(1)
                         me.eni1.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.eni.setAlpha(0)
                         me.eni1.setAlpha(0)
                     }
@@ -338,9 +327,8 @@ class Tableau1 extends Phaser.Scene{
                     if (me.roub.alpha === 0 && me.roub1.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.roub.setAlpha(1)
                         me.roub1.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.roub.setAlpha(0)
                         me.roub1.setAlpha(0)
                     }
@@ -350,9 +338,8 @@ class Tableau1 extends Phaser.Scene{
                     if (me.steamer.alpha === 0 && me.steamer1.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.steamer.setAlpha(1)
                         me.steamer1.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.steamer.setAlpha(0)
                         me.steamer1.setAlpha(0)
                     }
@@ -362,9 +349,8 @@ class Tableau1 extends Phaser.Scene{
                     if (me.enutrof.alpha === 0 && me.enutrof1.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.enutrof.setAlpha(1)
                         me.enutrof1.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.enutrof.setAlpha(0)
                         me.enutrof1.setAlpha(0)
                     }
@@ -374,9 +360,8 @@ class Tableau1 extends Phaser.Scene{
                     if (me.sram.alpha === 0 && me.sram1.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.sram.setAlpha(1)
                         me.sram1.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.sram.setAlpha(0)
                         me.sram1.setAlpha(0)
                     }
@@ -386,9 +371,8 @@ class Tableau1 extends Phaser.Scene{
                     if (me.sacrieur.alpha === 0 && me.sacrieur1.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.sacrieur1.setAlpha(1)
                         me.sacrieur.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.sacrieur1.setAlpha(0)
                         me.sacrieur.setAlpha(0)
                     }
@@ -398,9 +382,8 @@ class Tableau1 extends Phaser.Scene{
                     if (me.zobal.alpha === 0 && me.zobal1.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.zobal.setAlpha(1)
                         me.zobal1.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.zobal.setAlpha(0)
                         me.zobal1.setAlpha(0)
                     }
@@ -410,9 +393,8 @@ class Tableau1 extends Phaser.Scene{
                     if (me.eca.alpha === 0 && me.eca1.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.eca.setAlpha(1)
                         me.eca1.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.eca.setAlpha(0)
                         me.eca1.setAlpha(0)
                     }
@@ -422,9 +404,8 @@ class Tableau1 extends Phaser.Scene{
                     if (me.xelor.alpha === 0 && me.xelor1.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.xelor.setAlpha(1)
                         me.xelor1.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.xelor.setAlpha(0)
                         me.xelor1.setAlpha(0)
                     }
@@ -434,21 +415,18 @@ class Tableau1 extends Phaser.Scene{
                     if (me.hupper.alpha === 0 && me.hupper1.alpha === 0 && me.ankamashield.alpha === 0) {
                         me.hupper.setAlpha(1)
                         me.hupper1.setAlpha(1)
-
                     }
-                    else {
+                    else if (me.ankamashield.alpha === 0) {
                         me.hupper.setAlpha(0)
                         me.hupper1.setAlpha(0)
                     }
                     break;
-
+                //création du shield qui bloque toutesles commande ci dessus quand activé
                 case Phaser.Input.Keyboard.KeyCodes.V:
                     if (me.ankamashield.alpha === 0) {
                         me.ankamashield.setAlpha(1)
-
-
                     }
-                    else {
+                    else  {
                         me.ankamashield.setAlpha(0)
                     }
                     break;
@@ -456,8 +434,6 @@ class Tableau1 extends Phaser.Scene{
                 case Phaser.Input.Keyboard.KeyCodes.B:
                     if (me.ankamaauth.alpha === 0) {
                         me.ankamaauth.setAlpha(0)
-
-
                     }
                     else {
                         me.principal.setAlpha(0)
