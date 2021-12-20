@@ -56,6 +56,10 @@ class Tableau1 extends Phaser.Scene{
      */
     create(){
 
+        this.bt=this.sound.add('dofusmusic',{ loop: true });
+        this.bt.play()
+        this.bt.volume=0.2
+
 
        /**
          * Crée le background
