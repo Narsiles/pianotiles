@@ -93,7 +93,7 @@ class Tableau1 extends Phaser.Scene{
         this.Partifille = 0
         this.Partimec = 0
         this.text=this.add.text(330, 850, "Appuiyez sur A pour enlever l'authentificateur", { color: '#ffffff',fontSize:40 })
-        this.idle = this.add.sprite(500, 500, 'fantome1').setAlpha(0);
+        this.idle = this.add.sprite(700, 750, 'fantome1').setAlpha(0).setScale(0.4);
         console.log(frames)
         this.anims.create({
             key: 'fant',
