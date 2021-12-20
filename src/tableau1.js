@@ -113,8 +113,8 @@ class Tableau1 extends Phaser.Scene{
             this.osa = this.add.image(864, 486, 'osa1').setAlpha(0)
             this.osa1 = this.add.image(864, 486, 'osa2').setAlpha(0)
 
-            this.ougi = this.add.image(864, 486, 'ouginak1').setAlpha(0)
-            this.ougi1 = this.add.image(864, 486, 'ouginak2').setAlpha(0)
+            this.ouginak = this.add.image(864, 486, 'ouginak1').setAlpha(0)
+            this.ouginak1 = this.add.image(864, 486, 'ouginak2').setAlpha(0)
 
             this.panda = this.add.image(864, 486, 'panda1').setAlpha(0)
             this.panda1 = this.add.image(864, 486, 'panda2').setAlpha(0)
@@ -132,13 +132,13 @@ class Tableau1 extends Phaser.Scene{
             this.steamer1 = this.add.image(864, 486, 'steamer2').setAlpha(0)
 
             this.enu = this.add.image(864, 486, 'enutrof1').setAlpha(0)
-            this.enu1 = this.add.image(864, 486, 'enutrof2').setAlpha(0)
+            this.enutrof1 = this.add.image(864, 486, 'enutrof2').setAlpha(0)
 
             this.sram = this.add.image(864, 486, 'sram1').setAlpha(0)
             this.sram1 = this.add.image(864, 486, 'sram2').setAlpha(0)
 
-            this.sacri = this.add.image(864, 486, 'sacrieur1').setAlpha(0)
-            this.sacri1 = this.add.image(864, 486, 'sacrieur2').setAlpha(0)
+            this.sacrieur = this.add.image(864, 486, 'sacrieur1').setAlpha(0)
+            this.sacrieur1 = this.add.image(864, 486, 'sacrieur2').setAlpha(0)
 
             this.zobal = this.add.image(864, 486, 'zobal1').setAlpha(0)
             this.zobal1 = this.add.image(864, 486, 'zobal2').setAlpha(0)
@@ -211,155 +211,156 @@ class Tableau1 extends Phaser.Scene{
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.T:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.cadeau.alpha === 0 && me.perenoel.alpha === 1) {
+                        me.cadeau.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.Y:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.bouftouroyal.alpha === 0) {
+                        me.bouftouroyal.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.U:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.vendeur.alpha === 0) {
+                        me.vendeur.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.I:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.iop.alpha === 0 && me.iop1.alpha === 0) {
+                        me.iop.setAlpha(1)
+                        me.iop1.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.O:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.iop.alpha === 0 && me.iop1.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.P:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.iop.alpha === 0 && me.iop1.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.Q:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.iop.alpha === 0 && me.iop1.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.S:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.iop.alpha === 0 && me.iop1.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.D:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.iop.alpha === 0 && me.iop1.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.F:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.iop.alpha === 0 && me.iop1.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.G:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.iop.alpha === 0 && me.iop1.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.H:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.iop.alpha === 0 && me.iop1.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.J:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.iop.alpha === 0 && me.iop1.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.K:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.iop.alpha === 0 && me.iop1.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.L:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.iop.alpha === 0 && me.iop1.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.M:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.iop.alpha === 0 && me.iop1.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.W:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.iop.alpha === 0 && me.iop1.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.X:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.iop.alpha === 0 && me.iop1.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.C:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.iop.alpha === 0 && me.iop1.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.V:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.ankamaauth.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.B:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.ankamaauth.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
 
                 case Phaser.Input.Keyboard.KeyCodes.N:
-                    if (me.ankamaauth.alpha === 1) {
-                        me.ankamaauth.setAlpha(0)
+                    if (me.ankamaauth.alpha === 0) {
+                        me.ankamaauth.setAlpha(1)
 
                     }
                     break;
