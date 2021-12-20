@@ -80,7 +80,7 @@ class Tableau1 extends Phaser.Scene{
         this.ankamaauth = this.add.image(864, 486, 'ankamaauth')
         this.bt=this.sound.add('dofusmusic',{ loop: true });
         this.bt.play()
-        this.bt.volume=0.2
+        this.bt.volume=0.1
         this.Partifille = 0
         this.Partimec = 0
         this.text=this.add.text(330, 850, "Appuiyez sur A pour enlever l'authentificateur", { color: '#ffffff',fontSize:40 })
